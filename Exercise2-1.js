@@ -37,7 +37,6 @@ function Header() {
 function MainContent() {
     return (
         <div>
-        <Header />
             <h1>Reasons why I am excited to learn ReactJS: </h1>        
                 <ol>
                     <li>It can make me employable</li>
@@ -52,7 +51,6 @@ function MainContent() {
 function Footer() {
     return (
         <div>
-            <MainContent />
             <footer>
                     <small>
                         © 2023 Rohilla Development. All rights reserved.
@@ -62,5 +60,15 @@ function Footer() {
     )
 }
 
+function Page() {
+    return (
+        <div>
+            <Header />
+            <MainContent />
+            <Footer />
+        </div>
+    )
+}
+
 const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(<Footer/>)
+root.render(<Page/>)
